@@ -1,10 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Agdasima&family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap");
+@font-face {
+  font-family: "peyda", sans-serif;
+  src: url(/assets/fonts/farsifont/woff/peydaWeb-light.woff) format("woff"),
+    url(/assets/fonts/farsifont/ttf/peyda-light.ttf) format("ttf");
+}
 
+@font-face {
+  font-family: "peyda", sans-serif;
+  src: url(/assets/fonts/farsifont/woff/PeydaWeb-Medium.woff) format("woff"),
+    url(/assets/fonts/farsifont/ttf/Peyda-Medium.ttf) format("ttf");
+}
+@font-face {
+  font-family: "peyda", sans-serif;
+  src: url(/assets/fonts/farsifont/woff/PeydaWeb-Regular.woff) format("woff"),
+    url(/assets/fonts/farsifont/ttf/Peyda-Regular.ttf) format("ttf");
+}
 /* GLOBALLY */
 
 * {
-  font-family: "Poppins", sans-serif;
-  transition: all 0.3s;
+  direction: rtl;
+  font-family: "peyda", sans-serif;
+  transition: all 0.2s;
 }
 
 body {
@@ -88,7 +103,7 @@ h6 {
 .button i {
   display: inline-block;
   font-size: 18px;
-  margin-right: 10px;
+  padding-right: 5px;
 }
 
 .button:hover {
@@ -105,6 +120,7 @@ h6 {
 .button i,
 .header .title h1 {
   color: #ffd100;
+  vertical-align: middle;
 }
 
 .lang {
@@ -114,6 +130,7 @@ h6 {
   padding: 4px 8px;
   font-size: 12px;
   opacity: 0.7;
+  vertical-align: middle;
   align-self: flex-start;
 }
 
@@ -157,10 +174,10 @@ h6 {
   display: inline-block;
   border: 1px solid #333533;
   border-radius: 50%;
-  line-height: 42px;
+  line-height: 48px;
   text-align: center;
   vertical-align: middle;
-  margin-right: 12px;
+  margin-left: 12px;
 }
 
 .container nav ul li.active .marker,
@@ -174,16 +191,16 @@ h6 {
   content: "";
   display: block;
   height: 48px;
-  border-left: 1px dashed #333533;
-  margin: 16px 0 16px 21px;
+  border-right: 1px dashed #333533;
+  margin: 16px 21px 16px 0px;
 }
 
 /* SECTIONS */
 
 .sections {
   width: 700px;
-  border-left: 1px solid gray;
-  padding-left: 50px;
+  border-right: 1px solid gray;
+  padding-right: 50px;
 }
 
 .sections section:last-child {
@@ -205,7 +222,7 @@ h6 {
   color: #a0a0a0;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .contact p i:hover {
@@ -214,7 +231,11 @@ h6 {
 
 .social-media li {
   display: inline-block;
-  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.social-media li:last-child {
+  margin: 0;
 }
 
 .social-media li span {
@@ -292,7 +313,7 @@ h6 {
 
 .Skills li img {
   vertical-align: middle;
-  margin-right: 6px;
+  margin: 0 8px 0 10px;
 }
 
 .Skills .title {
@@ -301,7 +322,7 @@ h6 {
 
 .Skills li i {
   padding: 10px 12px;
-  border-left: 2px solid #a0a0a0;
+  border-right: 2px solid #a0a0a0;
   vertical-align: middle;
 }
 
@@ -358,21 +379,22 @@ h6 {
   font-size: 13px;
   padding: 4px 8px;
   border: 1px solid transparent;
+  vertical-align: middle;
 }
 
-.project .buttons a:last-child,
-.project .buttons a:first-child:hover {
+.project .buttons a:first-child,
+.project .buttons a:last-child:hover {
   border: 1px solid #333533;
   border-radius: 4px;
 }
 
-.project .buttons a:last-child:hover {
+.project .buttons a:first-child:hover {
   color: #f5f5f5;
   background-color: #333533;
 }
 
 .project .buttons a:last-child {
-  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .projects {
@@ -381,7 +403,7 @@ h6 {
 }
 
 .project:not(:last-child) {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .project {
@@ -390,4 +412,19 @@ h6 {
 
 .project .buttons a i {
   margin-right: 5px;
+}
+
+/* RESPONSIVE OUR WEBSITE */
+@media only screen and (max-width: 992px) {
+  .project:not(:last-child) {
+    margin-left: 0px;
+  }
+
+  .lang {
+    padding-right: 5px;
+    align-self: flex-end;
+  }
+}
+
+@media only screen and (max-width: 992px) {
 }
